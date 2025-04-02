@@ -1,0 +1,30 @@
+button {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+    font-size: 16px;
+    color: black;
+}
+
+button.active {
+    background: var(--primary-color);
+    color: var(--font-color);
+}
+
+button:not(.active) {
+    background: #f0f0f0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: var(--primary-color);
+    color: var(--font-color);
+    transition: .5s;
+}
+
+
+.hidden-nav {
+    transform: translateY(-100%);
+}
