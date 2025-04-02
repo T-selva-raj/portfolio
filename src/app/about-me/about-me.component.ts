@@ -3,11 +3,10 @@ import { AfterViewInit, Component } from '@angular/core';
 declare var particlesJS: any;
 
 @Component({
-  selector: 'app-about-me',
-  standalone: true,
-  imports: [],
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.css']
+    selector: 'app-about-me',
+    imports: [],
+    templateUrl: './about-me.component.html',
+    styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements AfterViewInit {
 

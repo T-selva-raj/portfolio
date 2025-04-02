@@ -4,11 +4,10 @@ import { HomeComponent } from "./home/home.component";
 import { AboutMeComponent } from "./about-me/about-me.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [NavBarComponent, HomeComponent, AboutMeComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [NavBarComponent, HomeComponent, AboutMeComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
 }
