@@ -10,13 +10,21 @@
         </p>
     </div>
 
-    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 px-8 w-4/5">
-        @for (visible of visibleIcons(); track visible; let i = $index) {
-        <img src="./angular.png" alt="Skill"
-            class="skill-icon transition-all duration-700 ease-out transform w-16 h-16 mx-auto" [ngClass]="{
-          'translate-x-0 opacity-100': visible,
-          '-translate-x-full opacity-0': !visible
-        }" />
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-8 w-4/5">
+        @for (visible of visibleIcons(); let i = $index; track i) {
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:scale-105 aspect-square"
+            [ngClass]="{
+        'translate-x-0 opacity-100': visible,
+        '-translate-x-full opacity-0': !visible
+      }">
+            <div class="h-3/4 flex items-center justify-center bg-gray-50">
+                <img [src]="skills[i].icon" [alt]="skills[i].name" class="w-16 h-16 object-contain" />
+            </div>
+            <div class="border-t border-gray-300"></div>
+            <div class="h-1/4 flex items-center justify-center">
+                <h3 class="text-sm font-semibold text-gray-800">{{ skills[i].name }}</h3>
+            </div>
+        </div>
         }
     </div>
 </div>

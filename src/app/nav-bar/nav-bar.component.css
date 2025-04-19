@@ -5,7 +5,6 @@
     border-radius: 25px;
     transition: 0.3s;
     font-size: 16px;
-    color: black;
 }
 
 .button.active {
@@ -14,7 +13,7 @@
 }
 
 .button:not(.active) {
-    background: #f0f0f0;
+    /* background: #f0f0f0; */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 

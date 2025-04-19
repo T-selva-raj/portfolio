@@ -1,4 +1,5 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { fadeInUp } from '../shared/animations/animations';
 
 declare var particlesJS: any;
 
@@ -7,11 +8,13 @@ declare var particlesJS: any;
   imports: [],
   standalone: true,
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.css']
+  styleUrls: ['./about-me.component.css'],
+  animations: [fadeInUp]
 })
 export class AboutMeComponent implements AfterViewInit {
-
   ngAfterViewInit(): void {
+
+
     setTimeout(() => {
       this.loadParticles();
     }, 0);
@@ -72,3 +75,5 @@ export class AboutMeComponent implements AfterViewInit {
     }
   }
 }
+
+

@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, QueryList, ViewChildren } from '@angular/core';
 import { TypeComponent } from "../type/type.component";
 import { fadeInOnEnterL, fadeInOnEnterR } from '../shared/animations/animations';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -14,20 +15,24 @@ export class HomeComponent implements AfterViewInit {
   headings: string[] = ["AN ANGULAR DEVELOPER", "A NODE JS DEVELOPER", "AN UI/UX DESIGNER"];
   @ViewChildren('observerTarget') observerTargets!: QueryList<ElementRef>;
   visibilityStates: boolean[] = [];
-
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { }
   ngAfterViewInit(): void {
-    this.observerTargets.forEach((el: ElementRef, index: number) => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            this.visibilityStates[index] = true;
-          }
-        },
-        { threshold: 0.3 }
-      );
+    if (isPlatformBrowser(this.platformId)) {
+      this.observerTargets.forEach((el: ElementRef, index: number) => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              this.visibilityStates[index] = true;
+            }
+          },
+          { threshold: 0.3 }
+        );
 
-      observer.observe(el.nativeElement);
-      this.visibilityStates[index] = false;
-    });
+        observer.observe(el.nativeElement);
+        this.visibilityStates[index] = false;
+      });
+    }
   }
 }

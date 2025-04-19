@@ -1,5 +1,5 @@
-import { AfterViewInit, Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,27 +14,31 @@ export class NavBarComponent implements AfterViewInit {
   isHidden = false;
   currentSection: string = 'home';
   isMenuOpen = false;
-
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { }
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
   ngAfterViewInit(): void {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.6
-    };
+    if (isPlatformBrowser(this.platformId)) {
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.6
+      };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.currentSection = entry.target.id;
-        }
-      });
-    }, options);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.currentSection = entry.target.id;
+          }
+        });
+      }, options);
 
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => observer.observe(section));
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => observer.observe(section));
+    }
   }
 
   scrollToTop() {

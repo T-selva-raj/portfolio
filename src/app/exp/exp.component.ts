@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, QueryList, ViewChildren } from '@angular/core';
 import { fadeInOnEnterR } from '../shared/animations/animations';
+import { isPlatformBrowser } from '@angular/common';
 
 declare var particlesJS: any;
 @Component({
@@ -43,23 +44,29 @@ export class ExpComponent implements AfterViewInit {
       description: 'I pursued my Bachelor of Engineering  in computer science from Einstein College of Engineering . During this period, I acquired a solid foundation in IT concepts, software development, and related subjects'
     }
   ];
-  ngAfterViewInit(): void {
-    this.observerTargets.forEach((el: ElementRef, index: number) => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            this.visibilityState = true;
-          }
-        },
-        { threshold: 0.3 }
-      );
 
-      observer.observe(el.nativeElement);
-      this.visibilityState = false;
-    });
-    setTimeout(() => {
-      this.loadParticles();
-    }, 10);
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { }
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.observerTargets.forEach((el: ElementRef, index: number) => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              this.visibilityState = true;
+            }
+          },
+          { threshold: 0.3 }
+        );
+
+        observer.observe(el.nativeElement);
+        this.visibilityState = false;
+      });
+      setTimeout(() => {
+        this.loadParticles();
+      }, 10);
+    }
   }
 
   loadParticles(): void {

@@ -1,18 +1,17 @@
-<section class="w-screen min-h-screen flex ">
-    <div class="w-1/2 h-full mt-30 ml-10 " [@fadeInOnEnterL]="visibilityStates[0] ? 'visible' : 'hidden'"
-        #observerTarget>
-
-        <div class=" text-orange-500 ">
-            <h1 class="font-extrabold text-5xl mb-2">HELLO EVERYONE</h1>
-            <h2 class="text-3xl font-semibold mb-2">I AM SELVARAJ</h2>
+<section class="w-screen min-h-screen flex flex-col md:flex-row items-center">
+    <div class="w-full md:w-1/2 h-full lg:mt-2 md:mt-4 md:ml-16 sm:mt-6"
+        [@fadeInOnEnterL]="visibilityStates[0] ? 'visible' : 'hidden'" #observerTarget>
+        <div class="text-orange-500 text-center md:text-left">
+            <h1 class="font-extrabold text-4xl sm:text-5xl mb-2 mt-5">HELLO EVERYONE</h1>
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-2">I AM SELVARAJ</h2>
             <app-type [strings]="headings"></app-type>
-            <p class="text-xl font-medium mb-2">
-                A Full Stack Developer specializing in Angular, passionate about building sleek, high performance web
+            <p class="text-base sm:text-lg font-medium mb-4">
+                A Full Stack Developer specializing in Angular, passionate about building sleek, high-performance web
                 applications.
             </p>
 
             <button
-                class="w-36 h-12 flex items-center justify-center gap-2 cursor-pointer shadow-md border-2 border-orange-500 text-gray-800 font-bold rounded-full hover:bg-orange-500 hover:text-white hover:scale-105 transition-transform">
+                class="w-36 h-12 flex items-center justify-center gap-2 mx-auto md:mx-0 cursor-pointer  bg-orange-500  font-bold rounded-full hover:bg-orange-400 text-white hover:scale-105 transition-transform">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-5 h-5">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -21,12 +20,9 @@
                 My CV
             </button>
         </div>
-
     </div>
-
-    <div class="w-1/2  flex items-center justify-center " [@fadeInOnEnterR]="visibilityStates[1] ? 'visible' : 'hidden'"
-        #observerTarget>
-        <img src="./selva.png" alt="my image" class="ml-30 max-h-[90vh]" />
+    <div class="w-full md:w-1/2 flex items-center justify-center mt-10 md:mt-0 sm:items-end"
+        [@fadeInOnEnterR]="visibilityStates[1] ? 'visible' : 'hidden'" #observerTarget>
+        <img src="./selva.png" alt="my image" class="max-h-[70vh] sm:max-h-[80vh] object-contain" />
     </div>
-
 </section>
