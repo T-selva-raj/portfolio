@@ -1,9 +1,16 @@
-<div class="min-h-screen w-screen flex flex-col">
-  <app-nav-bar class="h-15 sticky top-0 w-full z-50"></app-nav-bar>
-  <main class="flex-grow overflow-y-auto">
-    <section class="flex flex-col w-full">
-      <app-home class="h-screen w-full" aria-label="Home Section"></app-home>
-      <app-about-me id="about" class="h-screen w-full" aria-label="About Me Section"></app-about-me>
-    </section>
-  </main>
+<div class="h-screen flex flex-col">
+
+  <div class=" sticky top-0 z-50 ">
+    <app-nav-bar></app-nav-bar>
+  </div>
+  <div class="flex-1 overflow-y-auto scroll-smooth overflow-x-hidden">
+    <app-home id="home" aria-label="Home Section"></app-home>
+
+    <app-about-me id="about" aria-label="About Me Section"></app-about-me>
+
+    <app-skills id="skills" aria-label="Skills Section"></app-skills>
+
+    <app-exp id="exp" aria-label="Experiance Section"></app-exp>
+  </div>
+
 </div>

@@ -1,17 +1,18 @@
-<div class="flex h-full w-full">
-    <div class="w-1/2 h-full flex justify-center items-center">
-        <div class="ml-20 space-y-4 h-100 text-orange-500">
-            <h1 class="font-extrabold text-6xl mb-2 ">
-                HELLO EVERYONE
-            </h1>
+<section class="w-screen min-h-screen flex ">
+    <div class="w-1/2 h-full mt-30 ml-10 " [@fadeInOnEnterL]="visibilityStates[0] ? 'visible' : 'hidden'"
+        #observerTarget>
+
+        <div class=" text-orange-500 ">
+            <h1 class="font-extrabold text-5xl mb-2">HELLO EVERYONE</h1>
             <h2 class="text-3xl font-semibold mb-2">I AM SELVARAJ</h2>
-            <h2 class="text-2xl font-semibold mb-2">I AM <span #typedText> </span></h2>
+            <app-type [strings]="headings"></app-type>
             <p class="text-xl font-medium mb-2">
                 A Full Stack Developer specializing in Angular, passionate about building sleek, high performance web
                 applications.
             </p>
+
             <button
-                class="w-36 h-12 flex items-center justify-center gap-2 cursor-pointer shadow-md border-2 border-orange-500 text-gray-800 font-bold rounded-full hover:bg-orange-500 hover:text-white hover:scale-105 transition-transfor">
+                class="w-36 h-12 flex items-center justify-center gap-2 cursor-pointer shadow-md border-2 border-orange-500 text-gray-800 font-bold rounded-full hover:bg-orange-500 hover:text-white hover:scale-105 transition-transform">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-5 h-5">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -19,12 +20,13 @@
                 </svg>
                 My CV
             </button>
-
-
-
         </div>
+
     </div>
-    <div class="w-1/2 p-4 flex items-end justify-center" style="height: 95%;">
-        <img src="./selva.png" alt="my image" class="ml-30">
+
+    <div class="w-1/2  flex items-center justify-center " [@fadeInOnEnterR]="visibilityStates[1] ? 'visible' : 'hidden'"
+        #observerTarget>
+        <img src="./selva.png" alt="my image" class="ml-30 max-h-[90vh]" />
     </div>
-</div>
+
+</section>

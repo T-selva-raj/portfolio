@@ -1,0 +1,8 @@
+.skill-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}

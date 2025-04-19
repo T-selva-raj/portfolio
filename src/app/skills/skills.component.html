@@ -1,0 +1,22 @@
+<div class="flex flex-col main-container py-12 items-center justify-around text-orange-500">
+    <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-6xl font-bold sm:text-6xl md:text-7xl lg:text-8xl mb-5">My
+            Arsenal</h2>
+        <p class="text-lg md:text-xl text-center mb-12">
+            I build dynamic, high-performance websites using the MEAN stack (Angular, Node.js, Express.js) and MongoDB,
+            with
+            Tailwind CSS for responsive designs, creating seamless, intuitive, and maintainable user experiences with
+            precision.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 px-8 w-4/5">
+        @for (visible of visibleIcons(); track visible; let i = $index) {
+        <img src="./angular.png" alt="Skill"
+            class="skill-icon transition-all duration-700 ease-out transform w-16 h-16 mx-auto" [ngClass]="{
+          'translate-x-0 opacity-100': visible,
+          '-translate-x-full opacity-0': !visible
+        }" />
+        }
+    </div>
+</div>

@@ -1,7 +1,7 @@
-<div class="flex justify-between items-center px-4 h-24 bg-white pt-0.5" [class.hidden-nav]="isHidden">
+<div class="flex justify-between items-center px-4 h-20 bg-white pt-0.5">
     <img src="./logo.png" alt="Logo" class="h-50 ml-5 cursor-pointer">
     <div class="flex gap-5 mr-10" style="margin-right: 20px;">
-        <button (click)="scrollToTop()"
+        <button (click)="scrollToSection('home')"
             class="flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full  shadow-md hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer active">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
@@ -20,7 +20,7 @@
             </svg>
             About
         </button>
-        <button
+        <button (click)="scrollToSection('skills')"
             class="flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full   shadow-md hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
@@ -29,7 +29,7 @@
             </svg>
             Skills
         </button>
-        <button
+        <button (click)="scrollToSection('exp')"
             class="flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full   shadow-md hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">

@@ -3,10 +3,11 @@ import { AfterViewInit, Component } from '@angular/core';
 declare var particlesJS: any;
 
 @Component({
-    selector: 'app-about-me',
-    imports: [],
-    templateUrl: './about-me.component.html',
-    styleUrls: ['./about-me.component.css']
+  selector: 'app-about-me',
+  imports: [],
+  standalone: true,
+  templateUrl: './about-me.component.html',
+  styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements AfterViewInit {
 
@@ -18,7 +19,7 @@ export class AboutMeComponent implements AfterViewInit {
 
   loadParticles(): void {
     if (typeof particlesJS !== 'undefined') {
-      particlesJS('particles-js', {
+      particlesJS('particles-about', {
         "particles": {
           "number": {
             "value": 200,

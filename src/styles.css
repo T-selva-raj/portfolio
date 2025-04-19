@@ -14,11 +14,25 @@ body {
 }
 
 body {
-    width: 100vw;
     font-family: Arial, sans-serif;
 }
 
 .bg {
     background-color: #ffa725;
     color: white;
+}
+
+.main-container {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.half-container {
+    width: 50%;
+    height: 100%;
+}
+
+.full-container {
+    width: 100%;
+    height: 100%;
 }

@@ -1,27 +1,38 @@
-import { Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-nav-bar',
-    imports: [],
-    templateUrl: './nav-bar.component.html',
-    styleUrl: './nav-bar.component.css'
+  selector: 'app-nav-bar',
+  imports: [CommonModule],
+  standalone: true,
+  templateUrl: './nav-bar.component.html',
+  styleUrl: './nav-bar.component.css'
 })
-export class NavBarComponent {
+export class NavBarComponent implements AfterViewInit {
+
   lastScrollTop = 0;
   isHidden = false;
+  currentSection: string = 'home';
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const currentScroll = window.scrollY;
+  ngAfterViewInit(): void {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.6
+    };
 
-    if (currentScroll > this.lastScrollTop) {
-      this.isHidden = true;
-    } else {
-      this.isHidden = false;
-    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.currentSection = entry.target.id;
+        }
+      });
+    }, options);
 
-    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => observer.observe(section));
   }
+
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
