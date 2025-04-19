@@ -45,7 +45,7 @@ export class SkillsComponent implements AfterViewInit, OnInit {
     { name: 'Postman', icon: './skills/postman.png' },
     { name: 'VS code', icon: './skills/vscode.png' },
     { name: 'React basics', icon: './skills/react.png' },
-    { name: 'Swagger Documentation', icon: './skills/swagger.png' }
+    { name: 'Swagger', icon: './skills/swagger.png' }
   ];
 
   visibleIcons = signal<boolean[]>([]);
