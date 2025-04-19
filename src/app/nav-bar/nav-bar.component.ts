@@ -13,7 +13,11 @@ export class NavBarComponent implements AfterViewInit {
   lastScrollTop = 0;
   isHidden = false;
   currentSection: string = 'home';
+  isMenuOpen = false;
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
   ngAfterViewInit(): void {
     const options = {
       root: null,
@@ -34,9 +38,11 @@ export class NavBarComponent implements AfterViewInit {
   }
 
   scrollToTop() {
+    if (this.isMenuOpen == true) this.isMenuOpen = false;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   scrollToSection(sectionId: string) {
+    if (this.isMenuOpen == true) this.isMenuOpen = false;
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });

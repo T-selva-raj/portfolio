@@ -1,8 +1,10 @@
 <div class="flex justify-between items-center px-4 h-20 bg-white pt-0.5">
-    <img src="./logo.png" alt="Logo" class="h-50 ml-5 cursor-pointer">
-    <div class="flex gap-5 mr-10" style="margin-right: 20px;">
+    <img src="./logo.png" alt="Logo" height="100%" class="ml-5 mt-2 cursor-pointer h-36 sm:h-28 md:h-32 lg:h-24">
+
+
+    <div class="hidden sm:flex gap-5 sm:gap-7 md:gap-10 mr-10 space-x-3 sm:space-x-4">
         <button (click)="scrollToSection('home')"
-            class="flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full  shadow-md hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer active">
+            class="button flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer active">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -12,7 +14,7 @@
         </button>
 
         <button (click)="scrollToSection('about')"
-            class="flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full  shadow-md hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+            class="button flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -20,8 +22,9 @@
             </svg>
             About
         </button>
+
         <button (click)="scrollToSection('skills')"
-            class="flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full   shadow-md hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+            class="button flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -29,8 +32,9 @@
             </svg>
             Skills
         </button>
+
         <button (click)="scrollToSection('exp')"
-            class="flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full   shadow-md hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+            class="button flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -38,8 +42,9 @@
             </svg>
             Experience
         </button>
+
         <button
-            class="flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full   shadow-md hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+            class="button flex items-center gap-2 px-4 py-2 text-gray-700 font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -48,4 +53,30 @@
             Projects
         </button>
     </div>
+
+    <button class="sm:hidden p-2 mr-4 hover:cursor-pointer" (click)="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-gray-800" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </button>
+</div>
+
+<div class="fixed top-0 left-0 w-full h-full bg-white z-40 flex flex-col items-center justify-center gap-8 text-2xl text-orange-500 transition-all duration-300 ease-in-out"
+    [ngClass]="{ 'translate-y-0 opacity-100': isMenuOpen, '-translate-y-full opacity-0': !isMenuOpen }"
+    style="transition-property: transform, opacity;">
+    <button (click)="scrollToSection('home')" class="hover:text-orange-700 hover:cursor-pointer">Home</button>
+    <button (click)="scrollToSection('about')" class="hover:text-orange-700 hover:cursor-pointer">About</button>
+    <button (click)="scrollToSection('skills')" class="hover:text-orange-700 hover:cursor-pointer">Skills</button>
+    <button (click)="scrollToSection('exp')" class="hover:text-orange-700 hover:cursor-pointer">Experience</button>
+    <button (click)="scrollToSection('projects')" class="hover:text-orange-700 hover:cursor-pointer">Projects</button>
+
+    <!-- Close Icon -->
+    <button class="absolute top-5 right-6" (click)="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-700" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
 </div>
