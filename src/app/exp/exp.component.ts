@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { fadeInOnEnterR } from '../shared/animations/animations';
-import { isPlatformBrowser } from '@angular/common';
+import { PlatformService } from '../shared/platform.service';
 
 declare var particlesJS: any;
 @Component({
@@ -20,14 +20,14 @@ export class ExpComponent implements AfterViewInit {
       company: 'centizen inc & zenbasket',
       logo: './zenbasket-logo.png',
       duration: 'Jan 2024 – Present',
-      description: 'Developing full-stack features, enhancing performance, and working on scalable backend/frontend solutions.'
+      description: 'I worked as a Software Developer at zenbasket. My responsibilities included developing and maintaining backend and frontend systems, implementing new features, and optimizing performance.'
     },
     {
       title: 'Software Developer Trainee',
       company: 'centizen inc & zenbasket',
       logo: './zenbasket-logo.png',
       duration: 'Jul 2023 – Dec 2023',
-      description: 'Trained on Angular and Node.js, contributed to multiple backend modules, and built foundational full-stack experience.'
+      description: 'As a Software Developer Trainee at zenbasket, I underwent comprehensive training in software development methodologies, technologies, and tools. I actively participated in various projects and gained practical experience in software development.'
     },
     {
       title: 'Intern',
@@ -46,10 +46,9 @@ export class ExpComponent implements AfterViewInit {
   ];
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) { }
+    private platformService: PlatformService) { }
   ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
+    if (this.platformService.isBrowser) {
       this.observerTargets.forEach((el: ElementRef, index: number) => {
         const observer = new IntersectionObserver(
           ([entry]) => {

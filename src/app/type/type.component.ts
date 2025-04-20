@@ -1,6 +1,6 @@
-import { isPlatformBrowser } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, Inject, Input, PLATFORM_ID, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import Typed from 'typed.js';
+import { PlatformService } from '../shared/platform.service';
 
 @Component({
   selector: 'app-type',
@@ -11,9 +11,9 @@ import Typed from 'typed.js';
 export class TypeComponent implements AfterViewInit {
   @ViewChild('typedText') typedTextElement: ElementRef | undefined;
   @Input('strings') strings: string[] = ["AN ANGULAR DEVELOPER", "A NODE JS DEVELOPER", "AN UI/UX DESIGNER"];
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+  constructor(private platformService: PlatformService) { }
   ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId) && this.typedTextElement) {
+    if (this.platformService.isBrowser && this.typedTextElement) {
       const options = {
         strings: this.strings,
         typeSpeed: 80,

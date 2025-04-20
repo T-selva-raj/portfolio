@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { fadeInUp } from '../shared/animations/animations';
 
 declare var particlesJS: any;

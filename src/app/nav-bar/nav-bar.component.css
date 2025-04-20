@@ -27,3 +27,9 @@
 .hidden-nav {
     transform: translateY(-100%);
 }
+
+.active {
+    background: var(--primary-color);
+    color: var(--font-color);
+    transition: .5s;
+}

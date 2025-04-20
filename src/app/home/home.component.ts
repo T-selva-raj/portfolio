@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { TypeComponent } from "../type/type.component";
 import { fadeInOnEnterL, fadeInOnEnterR } from '../shared/animations/animations';
-import { isPlatformBrowser } from '@angular/common';
+import { PlatformService } from '../shared/platform.service';
 
 @Component({
   selector: 'app-home',
@@ -16,10 +16,9 @@ export class HomeComponent implements AfterViewInit {
   @ViewChildren('observerTarget') observerTargets!: QueryList<ElementRef>;
   visibilityStates: boolean[] = [];
   constructor(
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) { }
+    private platformService: PlatformService) { }
   ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
+    if (this.platformService.isBrowser) {
       this.observerTargets.forEach((el: ElementRef, index: number) => {
         const observer = new IntersectionObserver(
           ([entry]) => {

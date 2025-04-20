@@ -6,10 +6,11 @@ import AOS from 'aos';
 import { isPlatformBrowser } from '@angular/common';
 import { SkillsComponent } from "./skills/skills.component";
 import { ExpComponent } from "./exp/exp.component";
+import { ProjectsComponent } from "./projects/projects.component";
 
 @Component({
     selector: 'app-root',
-    imports: [NavBarComponent, HomeComponent, AboutMeComponent, SkillsComponent, ExpComponent],
+    imports: [NavBarComponent, HomeComponent, AboutMeComponent, SkillsComponent, ExpComponent, ProjectsComponent],
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'

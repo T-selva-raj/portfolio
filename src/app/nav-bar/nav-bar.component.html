@@ -3,8 +3,8 @@
 
 
     <div class="hidden sm:flex gap-5 sm:gap-7 md:gap-10 mr-10 space-x-3 sm:space-x-4 text-gray-700">
-        <button (click)="scrollToSection('home')"
-            class="button bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+        <button (click)="scrollToSection('home',$event)" id="home-button"
+            class="button  bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -13,7 +13,7 @@
             Home
         </button>
 
-        <button (click)="scrollToSection('about')"
+        <button (click)="scrollToSection('about',$event)" id="about-button"
             class="button bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
@@ -23,7 +23,7 @@
             About
         </button>
 
-        <button (click)="scrollToSection('skills')"
+        <button (click)="scrollToSection('skills',$event)" id="skills-button"
             class="button bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
@@ -33,7 +33,7 @@
             Skills
         </button>
 
-        <button (click)="scrollToSection('exp')"
+        <button (click)="scrollToSection('exp',$event)" id="exp-button"
             class="button bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
@@ -43,7 +43,7 @@
             Experience
         </button>
 
-        <button
+        <button (click)="scrollToSection('projects',$event)" id="projects-button"
             class="button bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">

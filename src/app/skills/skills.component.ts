@@ -2,14 +2,13 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
-  Inject,
   OnInit,
-  PLATFORM_ID,
   ViewChild,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PlatformService } from '../shared/platform.service';
 
 @Component({
   selector: 'app-skills',
@@ -51,15 +50,15 @@ export class SkillsComponent implements AfterViewInit, OnInit {
   visibleIcons = signal<boolean[]>([]);
 
   constructor(
-    private el: ElementRef,
-    @Inject(PLATFORM_ID) private platformId: Object
+    private platformService: PlatformService,
+    private el: ElementRef
   ) { }
   ngOnInit() {
     this.visibleIcons.set(Array(this.skills.length).fill(false));
   }
 
   ngAfterViewInit() {
-    if (isPlatformBrowser(this.platformId)) {
+    if (this.platformService.isBrowser) {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
