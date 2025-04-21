@@ -1,12 +1,12 @@
-import { AfterViewInit, Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { HomeComponent } from "./home/home.component";
 import { AboutMeComponent } from "./about-me/about-me.component";
 import AOS from 'aos';
-import { isPlatformBrowser } from '@angular/common';
 import { SkillsComponent } from "./skills/skills.component";
 import { ExpComponent } from "./exp/exp.component";
 import { ProjectsComponent } from "./projects/projects.component";
+import { PlatformService } from './shared/platform.service';
 
 @Component({
     selector: 'app-root',
@@ -17,10 +17,10 @@ import { ProjectsComponent } from "./projects/projects.component";
 })
 export class AppComponent implements OnInit {
 
-    constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+    constructor(private platformService: PlatformService) { }
 
     ngOnInit(): void {
-        if (isPlatformBrowser(this.platformId)) {
+        if (this.platformService.isBrowser) {
             AOS.init();
             document.addEventListener('scroll', () => AOS.refresh())
         }
