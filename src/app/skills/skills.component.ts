@@ -22,7 +22,7 @@ export class SkillsComponent implements AfterViewInit, OnInit {
   skills = [
     { name: 'HTML', icon: './skills/html.png' },
     { name: 'CSS', icon: './skills/css.png' },
-    { name: 'Vanilla JS', icon: './skills/js.png' },
+    { name: 'JS', icon: './skills/js.png' },
     { name: 'Bootstrap', icon: './skills/bootstrap.png' },
     { name: 'Tailwind CSS', icon: './skills/tailwind.png' },
     { name: 'Angular', icon: './skills/angular.png' },
