@@ -31,6 +31,7 @@ export class SkillsComponent implements AfterViewInit, OnInit {
     { name: 'Express Js', icon: './skills/express.png' },
     { name: 'GraphQl', icon: './skills/GraphQL.png' },
     { name: 'Passport JS', icon: './skills/passport.png' },
+    { name: 'Jest', icon: './skills/jest.png' },
     { name: 'MYSQL', icon: './skills/sql.png' },
     { name: 'Postgres SQL', icon: './skills/postgres.png' },
     { name: 'MongoDB', icon: './skills/mongodb.png' },
@@ -43,7 +44,6 @@ export class SkillsComponent implements AfterViewInit, OnInit {
     { name: 'Canva', icon: './skills/canva.png' },
     { name: 'Postman', icon: './skills/postman.png' },
     { name: 'VS code', icon: './skills/vscode.png' },
-    { name: 'React basics', icon: './skills/react.png' },
     { name: 'Swagger', icon: './skills/swagger.png' }
   ];
 
