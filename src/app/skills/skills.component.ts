@@ -5,7 +5,6 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
 import { signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlatformService } from '../shared/platform.service';
@@ -30,6 +29,7 @@ export class SkillsComponent implements AfterViewInit, OnInit {
     { name: 'Node Js', icon: './skills/node.png' },
     { name: 'Express Js', icon: './skills/express.png' },
     { name: 'GraphQl', icon: './skills/GraphQL.png' },
+    { name: 'Sequelize', icon: './skills/Sequelize.png' },
     { name: 'Passport JS', icon: './skills/passport.png' },
     { name: 'Jest', icon: './skills/jest.png' },
     { name: 'MYSQL', icon: './skills/sql.png' },
@@ -43,7 +43,6 @@ export class SkillsComponent implements AfterViewInit, OnInit {
     { name: 'C', icon: './skills/c.png' },
     { name: 'Canva', icon: './skills/canva.png' },
     { name: 'Postman', icon: './skills/postman.png' },
-    { name: 'VS code', icon: './skills/vscode.png' },
     { name: 'Swagger', icon: './skills/swagger.png' }
   ];
 

@@ -4,7 +4,8 @@
 
     <div class="hidden sm:flex gap-5 sm:gap-7 md:gap-10 mr-10 space-x-3 sm:space-x-4 text-gray-700">
         <button (click)="scrollToSection('home',$event)" id="home-button"
-            class="button  bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+            [ngClass]="{ 'bg-orange-400 text-white ': currentButton === 'home-button' }"
+            class="button  shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"

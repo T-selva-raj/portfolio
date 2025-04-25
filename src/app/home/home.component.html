@@ -1,39 +1,49 @@
-<section class="w-screen min-h-screen flex flex-col md:flex-row items-center">
-    <div class="order-2 md:order-1 md:w-1/2 lg:mt-1 md:mt-4 md:ml-16 sm:mt-6 mb-5"
+<section
+    class="w-screen min-h-screen flex flex-col md:flex-row items-center bg-gradient-to-br  relative overflow-hidden">
+    <div class="order-2 md:order-1 md:w-1/2 lg:mt-1 md:mt-4 md:ml-16 sm:mt-6 mb-5 px-6 z-10"
         [@fadeInOnEnterL]="visibilityStates[0] ? 'visible' : 'hidden'" #observerTarget>
-        <div class="text-orange-500 text-center md:text-left leading-loose p-6">
-            <h1 class="font-extrabold text-4xl sm:text-5xl mb-2 mt-5">
-                HELLO EVERYONE
-            </h1>
-
-            <h2 class="text-2xl sm:text-3xl font-semibold mb-2">
-                I AM SELVARAJ
-            </h2>
+        <div class="text-orange-500 text-center md:text-left leading-loose">
+            <h1 class="font-extrabold text-4xl sm:text-5xl mb-2 mt-5">HELLO EVERYONE</h1>
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-2">I AM John</h2>
 
             <app-type [strings]="headings"></app-type>
 
-            <p class="text-base sm:text-lg font-medium mb-4">
+            <p class="text-base sm:text-lg font-medium mb-6 text-gray-700">
                 A Full Stack Developer specializing in Angular, passionate about building sleek, high-performance web
                 applications.
             </p>
 
-            <button
-                class="w-36 h-12 flex items-center justify-center gap-2 mx-auto md:mx-0 cursor-pointer bg-orange-500 font-bold rounded-full hover:bg-orange-400 text-white hover:scale-105 transition-transform">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-5 h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                </svg>
-                My CV
-            </button>
-        </div>
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
+                <button
+                    class="w-36 h-12 flex items-center justify-center gap-2 bg-orange-500 font-bold rounded-full hover:bg-orange-400 text-white hover:scale-105 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    My CV
+                </button>
 
+                <button
+                    class="w-36 h-12 flex items-center justify-center gap-2 bg-white text-orange-500 border border-orange-400 font-bold rounded-full hover:bg-orange-100 hover:scale-105 transition-transform">
+                    Contact Me
+                </button>
+            </div>
+
+            <div class="flex justify-center md:justify-start gap-6 mb-6 text-gray-600 text-xl">
+                <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-orange-500 transition"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
     </div>
 
-    <div class="order-1 md:order-2 w-full md:w-1/2 flex items-center justify-center mt-10 md:mt-0 sm:items-end"
+    <div class="order-1 md:order-2 w-full md:w-1/2 flex items-center justify-center mt-10 md:mt-0 sm:items-end z-10"
         [@fadeInOnEnterR]="visibilityStates[1] ? 'visible' : 'hidden'" #observerTarget>
-        <div class="object-contain relative  bg-orange-400 rounded-full" style="height:350px;width: 350px;">
-            <img src="./me1.png" alt="my image" style="width:100%;height: 100%;position: absolute;bottom: -15px;" />
+        <div class="object-contain relative bg-orange-400 rounded-full overflow-hidden shadow-xl"
+            style="height:350px;width:350px;">
+            <img src="./me1.png" alt="my image"
+                style="width:100%;height:100%;object-fit:contain;position:absolute;bottom:-15px;" />
         </div>
     </div>
 </section>

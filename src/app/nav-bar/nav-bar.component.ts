@@ -20,6 +20,7 @@ export class NavBarComponent implements AfterViewInit {
     if (this.platformService.isBrowser) {
       const currentButtonElement = document.getElementById(this.currentButton);
       currentButtonElement?.classList.add('active');
+
     }
   }
   toggleMenu() {
