@@ -8,7 +8,9 @@ body {
 }
 
 :root {
-    --primary-color: #f7941d;
+    /* --primary-color: #f7941d;
+     */
+    --primary-color: #51a2ff;
     --font-color: #fff;
 }
 
