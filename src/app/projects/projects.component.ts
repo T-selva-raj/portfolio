@@ -9,30 +9,22 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   projects = [
     {
-      name: "Google chrome",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png",
-      description: "Google Chrome is a free, open-source web browser developed by Google, known for its speed, ease of use, and integration with other Google services, and is available for desktop and mobile platforms"
+      name: "Personal Portfolio",
+      image: "./projects/portfolio.png",
+      description: "I developed a modern personal portfolio using Angular 18 and Tailwind CSS to showcase my skills, projects, and experience. The application features smooth animations to enhance user engagement and interactivity. It is fully responsive, ensuring optimal performance across devices. I deployed the project using Vercel for fast and reliable hosting",
+      link: 'https://selvaraj-dev.vercel.app'
     },
     {
-      name: "Google chrome",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png",
-      description: "Google Chrome is a free, open-source web browser developed by Google, known for its speed, ease of use, and integration with other Google services, and is available for desktop and mobile platforms"
-    }, {
-      name: "Google chrome",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png",
-      description: "Google Chrome is a free, open-source web browser developed by Google, known for its speed, ease of use, and integration with other Google services, and is available for desktop and mobile platforms"
-    }, {
-      name: "Google chrome",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png",
-      description: "Google Chrome is a free, open-source web browser developed by Google, known for its speed, ease of use, and integration with other Google services, and is available for desktop and mobile platforms"
-    }, {
-      name: "Google chrome",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png",
-      description: "Google Chrome is a free, open-source web browser developed by Google, known for its speed, ease of use, and integration with other Google services, and is available for desktop and mobile platforms"
-    }, {
-      name: "Google chrome",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png",
-      description: "Google Chrome is a free, open-source web browser developed by Google, known for its speed, ease of use, and integration with other Google services, and is available for desktop and mobile platforms"
+      name: "Task Management Application",
+      image: "./projects/task.png",
+      description: "I developed a full-stack Task Management Application using Angular and Angular Material for a clean, responsive user interface. The backend is powered by Node.js and Express, with data stored and managed in a PostgreSQL database. The app allows users to create, update, categorize, and track tasks efficiently, with a focus on usability and performance across devices.",
+      link: 'https://selvaraj-dev.vercel.app'
+    },
+    {
+      name: "Personal Portfolio",
+      image: "./projects/portfolio.png",
+      description: "I developed a modern personal portfolio using Angular 18 and Tailwind CSS to showcase my skills, projects, and experience. The application features smooth animations to enhance user engagement and interactivity. It is fully responsive, ensuring optimal performance across devices. I deployed the project using Vercel for fast and reliable hosting",
+      link: 'https://selvaraj-dev.vercel.app'
     }
   ]
 }

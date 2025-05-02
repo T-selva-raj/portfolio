@@ -3,6 +3,20 @@
     height: 100px;
 }
 
-.skill-icon:hover {
-    transform: scale(1.1);
+
+
+@keyframes rotate-enter {
+    0% {
+        transform: rotateX(0deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotateX(360deg);
+        opacity: 1;
+    }
+}
+
+.rotate-enter {
+    animation: rotate-enter 0.5s ease-out forwards;
 }

@@ -19,11 +19,6 @@ export class NavBarComponent implements AfterViewInit {
     private platformService: PlatformService,
     private sectionService: SectionService
   ) {
-    effect(() => {
-      this.currentButton = this.currentSectionId();
-      console.log(this.currentSectionId());
-
-    })
   }
   ngAfterViewInit(): void {
     if (this.platformService.isBrowser) {
