@@ -18,7 +18,7 @@ export class ProjectsComponent {
       name: "Task Management Application",
       image: "./projects/task.png",
       description: "I developed a full-stack Task Management Application using Angular and Angular Material for a clean, responsive user interface. The backend is powered by Node.js and Express, with data stored and managed in a PostgreSQL database. The app allows users to create, update, categorize, and track tasks efficiently, with a focus on usability and performance across devices.",
-      link: 'https://selvaraj-dev.vercel.app'
+      link: 'https://to-do-selva.vercel.app'
     },
     {
       name: "Personal Portfolio",
