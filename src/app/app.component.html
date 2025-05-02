@@ -3,15 +3,12 @@
   <div class=" sticky top-0 z-50 ">
     <app-nav-bar></app-nav-bar>
   </div>
-  <div class="flex-1 overflow-y-auto scroll-smooth overflow-x-hidden ">
-    <app-home id="home" aria-label="Home Section"></app-home>
-
-    <app-about-me id="about" aria-label="About Me Section"></app-about-me>
-
-    <app-skills id="skills" aria-label="Skills Section"></app-skills>
-
-    <app-exp id="exp" aria-label="Experiance Section"></app-exp>
-    <app-projects id="projects" aria-label="Projects Section"></app-projects>
+  <div #scrollContainer class="flex-1 overflow-y-auto scroll-smooth overflow-x-hidden" (scroll)="onContainerScroll()">
+    <section id="home" #sectionRef aria-label="Home Section"><app-home></app-home></section>
+    <section id="about" #sectionRef aria-label="About Me Section"><app-about-me></app-about-me></section>
+    <section id="skills" #sectionRef aria-label="Skills Section"><app-skills></app-skills></section>
+    <section id="exp" #sectionRef aria-label="Experiance Section"><app-exp></app-exp></section>
+    <section id="projects" #sectionRef aria-label="Projects Section"><app-projects></app-projects></section>
   </div>
 
 </div>

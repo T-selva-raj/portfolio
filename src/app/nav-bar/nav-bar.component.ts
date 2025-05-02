@@ -1,6 +1,7 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlatformService } from '../shared/platform.service';
+import { SectionService } from '../shared/section.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,9 +14,17 @@ export class NavBarComponent implements AfterViewInit {
 
   currentButton: string = 'home-button';
   isMenuOpen = false;
+  currentSectionId = computed(() => this.sectionService.currentSectionId());
   constructor(
-    private platformService: PlatformService
-  ) { }
+    private platformService: PlatformService,
+    private sectionService: SectionService
+  ) {
+    effect(() => {
+      this.currentButton = this.currentSectionId();
+      console.log(this.currentSectionId());
+
+    })
+  }
   ngAfterViewInit(): void {
     if (this.platformService.isBrowser) {
       const currentButtonElement = document.getElementById(this.currentButton);

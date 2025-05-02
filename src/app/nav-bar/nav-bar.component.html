@@ -3,9 +3,11 @@
 
 
     <div class="hidden sm:flex gap-5 sm:gap-7 md:gap-10 mr-10 space-x-3 sm:space-x-4 text-gray-700">
-        <button (click)="scrollToSection('home',$event)" id="home-button"
-            [ngClass]="{ 'bg-orange-400 text-white ': currentButton === 'home-button' }"
-            class="button  shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+        <button (click)="scrollToSection('home', $event)" id="home-button" [ngClass]="{
+          'bg-orange-400 text-white': currentSectionId() === 'home',
+          'active': currentSectionId() === 'home'
+        }"
+            class="button shadow-2xl flex items-center gap-2 px-4 py-2 font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -14,8 +16,11 @@
             Home
         </button>
 
-        <button (click)="scrollToSection('about',$event)" id="about-button"
-            class="button bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+        <button (click)="scrollToSection('about', $event)" id="about-button" [ngClass]="{
+          'bg-orange-400 text-white': currentSectionId() === 'about',
+          'active': currentSectionId() === 'about'
+        }"
+            class="button shadow-2xl flex items-center gap-2 px-4 py-2 font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -24,8 +29,11 @@
             About
         </button>
 
-        <button (click)="scrollToSection('skills',$event)" id="skills-button"
-            class="button bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+        <button (click)="scrollToSection('skills', $event)" id="skills-button" [ngClass]="{
+          'bg-orange-400 text-white': currentSectionId() === 'skills',
+          'active': currentSectionId() === 'skills'
+        }"
+            class="button shadow-2xl flex items-center gap-2 px-4 py-2 font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -34,8 +42,11 @@
             Skills
         </button>
 
-        <button (click)="scrollToSection('exp',$event)" id="exp-button"
-            class="button bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+        <button (click)="scrollToSection('exp', $event)" id="exp-button" [ngClass]="{
+          'bg-orange-400 text-white': currentSectionId() === 'exp',
+          'active': currentSectionId() === 'exp'
+        }"
+            class="button shadow-2xl flex items-center gap-2 px-4 py-2 font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -44,8 +55,11 @@
             Experience
         </button>
 
-        <button (click)="scrollToSection('projects',$event)" id="projects-button"
-            class="button bg-white shadow-2xl flex items-center gap-2 px-4 py-2  font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
+        <button (click)="scrollToSection('projects', $event)" id="projects-button" [ngClass]="{
+          'bg-orange-400 text-white': currentSectionId() === 'projects',
+          'active': currentSectionId() === 'projects'
+        }"
+            class="button shadow-2xl flex items-center gap-2 px-4 py-2 font-bold rounded-full hover:bg-orange-600 hover:text-white hover:scale-105 transition-transform cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -54,6 +68,7 @@
             Projects
         </button>
     </div>
+
 
     <button class="sm:hidden p-2 mr-4 hover:cursor-pointer rounded-4xl shadow-lg" (click)="toggleMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-gray-800" fill="none" viewBox="0 0 24 24"
