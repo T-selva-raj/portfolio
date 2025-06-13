@@ -29,7 +29,7 @@
 }
 
 .active {
-    background: var(--primary-color) !important;
+    background: #1449e6d4 !important;
     color: var(--font-color) !important;
     transition: .5s;
 }
