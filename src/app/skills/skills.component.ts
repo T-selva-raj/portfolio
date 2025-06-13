@@ -39,8 +39,6 @@ export class SkillsComponent implements AfterViewInit, OnInit {
     { name: 'Github', icon: './skills/github.png' },
     { name: 'NPM', icon: './skills/npm.png' },
     { name: 'Firebase', icon: './skills/firebase.png' },
-    { name: 'Python', icon: './skills/python.png' },
-    { name: 'C', icon: './skills/c.png' },
     { name: 'Canva', icon: './skills/canva.png' },
     { name: 'Postman', icon: './skills/postman.png' },
     { name: 'Swagger', icon: './skills/swagger.png' }
