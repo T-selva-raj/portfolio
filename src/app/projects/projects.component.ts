@@ -12,7 +12,7 @@ export class ProjectsComponent {
       name: "Personal Portfolio",
       image: "./projects/portfolio.png",
       description: "I developed a modern personal portfolio using Angular 18 and Tailwind CSS to showcase my skills, projects, and experience. The application features smooth animations to enhance user engagement and interactivity. It is fully responsive, ensuring optimal performance across devices. I deployed the project using Vercel for fast and reliable hosting",
-      link: 'https://selvaraj-dev.vercel.app'
+      link: '#'
     },
     {
       name: "Task Management Application",
@@ -21,10 +21,10 @@ export class ProjectsComponent {
       link: 'https://to-do-selva.vercel.app'
     },
     {
-      name: "Personal Portfolio",
-      image: "./projects/portfolio.png",
-      description: "I developed a modern personal portfolio using Angular 18 and Tailwind CSS to showcase my skills, projects, and experience. The application features smooth animations to enhance user engagement and interactivity. It is fully responsive, ensuring optimal performance across devices. I deployed the project using Vercel for fast and reliable hosting",
-      link: 'https://selvaraj-dev.vercel.app'
+      name: "RKC (Kabaddi Tournament Management Application)",
+      image: "./projects/rkc.png",
+      description: "Currently developing a full-stack Kabaddi Tournament Management Application using Angular, Node.js, MongoDB, and PrimeNG. The app will handle key features like team registration, player verification, fixtures, and score updates, aiming to simplify event coordination. The goal is to create a responsive, centralized platform that helps organizers manage kabaddi tournaments more efficiently.",
+      link: 'https://github.com/T-selva-raj/RKC-admin'
     }
   ]
 }
