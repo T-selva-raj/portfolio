@@ -33,6 +33,7 @@
     color: var(--font-color) !important;
     transition: .5s;
 }
+
 .text-glow {
-  text-shadow: 0 0 8px #3b82f6, 0 0 12px #3b82f6, 0 0 20px #3b82f6;
+    text-shadow: 0 0 2px #3b82f6, 0 0 2px #3b82f6;
 }
