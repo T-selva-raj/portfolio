@@ -35,7 +35,7 @@ export class HomeComponent implements AfterViewInit {
     }
   }
   openResume() {
-    window.open('https://drive.google.com/file/d/172sfP0bS6D1wmTR5AQrDdSAZPRog_lxE/view?usp=drive_link', '_blank');
+    window.open('https://drive.google.com/file/d/1PyDDHFeaec5a7qfZNaLqzhp_D9WZjen0/view?usp=drive_link', '_blank');
   }
 
 }
