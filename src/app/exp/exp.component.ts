@@ -39,7 +39,7 @@ export class ExpComponent implements AfterViewInit {
     {
       title: 'BE Computer science and engineering',
       company: 'Einstein college of engineering',
-      logo: './zenbasket-logo.png',
+      logo: './college.png',
       duration: '2019-2023',
       description: 'I pursued my Bachelor of Engineering  in computer science from Einstein College of Engineering . During this period, I acquired a solid foundation in IT concepts, software development, and related subjects'
     }
