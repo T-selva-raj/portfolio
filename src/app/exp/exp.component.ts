@@ -12,7 +12,7 @@ declare var particlesJS: any;
   animations: [fadeInOnEnterR]
 })
 export class ExpComponent implements AfterViewInit {
-  @ViewChildren('cards') observerTargets!: QueryList<ElementRef>;
+  @ViewChildren('cards') cards!: QueryList<ElementRef>;
   visibilityState = false;
   experiences = [
     {
@@ -45,7 +45,7 @@ export class ExpComponent implements AfterViewInit {
     private platformService: PlatformService) { }
   ngAfterViewInit(): void {
     if (this.platformService.isBrowser) {
-      this.observerTargets.forEach((el: ElementRef, index: number) => {
+      this.cards.forEach((el: ElementRef, index: number) => {
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting) {
