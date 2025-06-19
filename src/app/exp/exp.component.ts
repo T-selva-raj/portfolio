@@ -19,7 +19,7 @@ export class ExpComponent implements AfterViewInit {
       title: 'Software Developer',
       company: 'Centizen Inc & Zenbasket',
       logo: './zenbasket-logo.png',
-      duration: 'Aug 2023 – Present',
+      duration: 'July 2023 – Present',
       link: 'https://getzenbasket.com/',
       description: 'Contributed to the end-to-end development of Zenbasket (E-commerce platform). Built and maintained backend modules such as Products, Specifications, Checkout, Plugins, and Badges using Node.js and Express.js. Designed and implemented scalable REST APIs with MySQL and PostgreSQL support for performance-critical features. Actively resolved production-level issues, reducing system downtime and improving stability. On the frontend, collaborated with UI teams using Angular to enhance the user experience. Recognized with the "Innovation Mastermind" and "Rising Star" awards for delivering high-impact features and consistently exceeding expectations.'
     },
