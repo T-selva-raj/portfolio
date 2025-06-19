@@ -17,23 +17,18 @@ export class ExpComponent implements AfterViewInit {
   experiences = [
     {
       title: 'Software Developer',
-      company: 'centizen inc & zenbasket',
+      company: 'Centizen Inc & Zenbasket',
       logo: './zenbasket-logo.png',
-      duration: 'Jan 2024 – Present',
-      description: 'I worked as a Software Developer at zenbasket. My responsibilities included developing and maintaining backend and frontend systems, implementing new features, and optimizing performance.'
-    },
-    {
-      title: 'Software Developer Trainee',
-      company: 'centizen inc & zenbasket',
-      logo: './zenbasket-logo.png',
-      duration: 'Jul 2023 – Dec 2023',
-      description: 'As a Software Developer Trainee at zenbasket, I underwent comprehensive training in software development methodologies, technologies, and tools. I actively participated in various projects and gained practical experience in software development.'
+      duration: 'Aug 2023 – Present',
+      link: 'https://getzenbasket.com/',
+      description: 'Contributed to the end-to-end development of Zenbasket (E-commerce platform). Built and maintained backend modules such as Products, Specifications, Checkout, Plugins, and Badges using Node.js and Express.js. Designed and implemented scalable REST APIs with MySQL and PostgreSQL support for performance-critical features. Actively resolved production-level issues, reducing system downtime and improving stability. On the frontend, collaborated with UI teams using Angular to enhance the user experience. Recognized with the "Innovation Mastermind" and "Rising Star" awards for delivering high-impact features and consistently exceeding expectations.'
     },
     {
       title: 'Intern',
       company: 'centizen inc',
       logo: './zenbasket-logo.png',
       duration: 'Feb 2023 – Jun 2023',
+      link: 'https://www.centizen.com/',
       description: 'During the internship, I gained hands-on experience with Node.js, Express.js, and Passport.js for backend development. I worked with MySQL and PostgreSQL for database management and learned to build RESTful APIs. I also explored Angular basics, which helped me understand front-end development and full-stack integration using the MEAN stack.'
     },
     {
@@ -41,6 +36,7 @@ export class ExpComponent implements AfterViewInit {
       company: 'Einstein college of engineering',
       logo: './college.png',
       duration: '2019-2023',
+      link: 'https://einsteincollege.ac.in/',
       description: 'I pursued my Bachelor of Engineering  in computer science from Einstein College of Engineering . During this period, I acquired a solid foundation in IT concepts, software development, and related subjects'
     }
   ];
@@ -121,5 +117,8 @@ export class ExpComponent implements AfterViewInit {
         "retina_detect": true
       });
     }
+  }
+  navigateToLink(link: string): void {
+    window.open(link, '_blank');
   }
 }
